@@ -24,8 +24,7 @@ public class Student extends Person {
 
     @Override
     public String introduce() {
-        boolean isLeader = klass != null && klass.getLeader() != null && klass.getLeader().getName().equals(super.getName());
-        System.out.println(isLeader);
+        boolean isLeader = klass != null && klass.getLeader() != null && klass.getLeader().getName().equals(this.getName());
         String isLeaderString = isLeader ? String.format("I am a Student. I am Leader of %s.",klass.getDisplayName()) : String.format("I am a Student. I am at Class %d.", klass.getNumber());
         return super.introduce() + " " + isLeaderString;
     }
