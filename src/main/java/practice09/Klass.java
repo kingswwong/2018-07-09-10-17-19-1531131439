@@ -40,6 +40,5 @@ public class Klass {
 
     public void appendMember(Student student) {
         student.setKlass(this);
-        System.out.println("aaaaa");
     }
 }
