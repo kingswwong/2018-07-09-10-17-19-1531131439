@@ -54,19 +54,14 @@ public class Klass {
             System.out.print("It is not one of us.\n");
         } else {
             this.leader = student;
-            for(Teacher teacher: teachers){
-                teacher.notifyWhenStudentBecomeLeader(student);
-            }
-//            this.teachers.forEach(teacher -> System.out.print(String.format("I am %s. I know %s become Leader of Class %d.\n", teacher.getName(), student.getName(), number)));
+            this.teachers.forEach(teacher -> System.out.print(String.format("I am %s. I know %s become Leader of Class %d.\n", teacher.getName(), student.getName(), number)));
         }
     }
 
     public void appendMember(Student student) {
         student.setKlass(this);
         students.add(student);
-        for(Teacher teacher: teachers){
-            teacher.notifyWhenStudentBecomeLeader(student);
-        }
+        this.teachers.forEach(teacher -> System.out.print(String.format("I am %s. I know %s has joined Class %s.\n", teacher.getName(), student.getName(), number)));
     }
 
     public boolean isIn(Student student){
