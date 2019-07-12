@@ -62,4 +62,12 @@ public class Teacher extends Person {
         }
         return false;
     }
+
+    public void notifyWhenStudentJoin(Student student){
+//        System.out.print(String.format("I am %s. I know %s has joined Class %d.\n",this.getName(),student.getName(), student.getKlass().getNumber()));
+        System.out.print(String.format("I am %s. I know %s become Leader of Class %d.\n", this.getName(), student.getName(), student.getKlass().getNumber()));
+    }
+    public void notifyWhenStudentBecomeLeader(Student student){
+        System.out.print(String.format("I am %s. I know %s has joined Class %s.\n", this.getName(), student.getName(), student.getKlass().getNumber()));
+    }
 }
