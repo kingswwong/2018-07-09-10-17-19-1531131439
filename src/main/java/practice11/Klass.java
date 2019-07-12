@@ -67,7 +67,6 @@ public class Klass {
         for(Teacher teacher: teachers){
             teacher.notifyWhenStudentBecomeLeader(student);
         }
-//        this.teachers.forEach(teacher -> System.out.print(String.format("I am %s. I know %s has joined Class %s.\n", teacher.getName(), student.getName(), number)));
     }
 
     public boolean isIn(Student student){
